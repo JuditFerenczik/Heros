@@ -1,0 +1,13 @@
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\obj\Debug\netcoreapp3.1\hos.csprojAssemblyReference.cache
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\obj\Debug\netcoreapp3.1\hos.AssemblyInfoInputs.cache
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\obj\Debug\netcoreapp3.1\hos.AssemblyInfo.cs
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\obj\Debug\netcoreapp3.1\hos.csproj.CoreCompileInputs.cache
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\bin\Debug\netcoreapp3.1\hos.exe
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\bin\Debug\netcoreapp3.1\hos.deps.json
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\bin\Debug\netcoreapp3.1\hos.runtimeconfig.json
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\bin\Debug\netcoreapp3.1\hos.runtimeconfig.dev.json
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\bin\Debug\netcoreapp3.1\hos.dll
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\bin\Debug\netcoreapp3.1\hos.pdb
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\obj\Debug\netcoreapp3.1\hos.dll
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\obj\Debug\netcoreapp3.1\hos.pdb
+C:\Judit\Programozás\szoftverfejlesztő\C\hos\hos\obj\Debug\netcoreapp3.1\hos.genruntimeconfig.cache
