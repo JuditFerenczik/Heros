@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Judit\\Programozás\\szoftverfejlesztő\\C\\hos\\hos\\hos.csproj": {}
+    "C:\\Judit\\Programozás\\szoftverfejlesztő\\C#\\hos\\hos\\hos.csproj": {}
   },
   "projects": {
-    "C:\\Judit\\Programozás\\szoftverfejlesztő\\C\\hos\\hos\\hos.csproj": {
+    "C:\\Judit\\Programozás\\szoftverfejlesztő\\C#\\hos\\hos\\hos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Judit\\Programozás\\szoftverfejlesztő\\C\\hos\\hos\\hos.csproj",
+        "projectUniqueName": "C:\\Judit\\Programozás\\szoftverfejlesztő\\C#\\hos\\hos\\hos.csproj",
         "projectName": "hos",
-        "projectPath": "C:\\Judit\\Programozás\\szoftverfejlesztő\\C\\hos\\hos\\hos.csproj",
+        "projectPath": "C:\\Judit\\Programozás\\szoftverfejlesztő\\C#\\hos\\hos\\hos.csproj",
         "packagesPath": "C:\\Users\\Felhasználó\\.nuget\\packages\\",
-        "outputPath": "C:\\Judit\\Programozás\\szoftverfejlesztő\\C\\hos\\hos\\obj\\",
+        "outputPath": "C:\\Judit\\Programozás\\szoftverfejlesztő\\C#\\hos\\hos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Felhasználó\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

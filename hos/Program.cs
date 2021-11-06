@@ -22,16 +22,16 @@ namespace hos
                 {
                     if (!isDead) { 
                     int a = rnd.Next(5, 8);
-                    Console.WriteLine(a);
+                    Console.WriteLine("Hero will punch the villain with " + a);
                     
                     int b = rnd.Next(6, 9);
-                    Console.WriteLine(b);
-                    if (miss(rnd.Next(0, 10)))
+                    Console.WriteLine("Villain will punch the hero with " +b);
+                    if (miss(rnd.Next(0, 10),"H"))
                     {
                         utesekH[i] = 0;
 
                     }
-                    else if (critic(rnd.Next(0, 10))) 
+                    else if (critic(rnd.Next(0, 10),"H")) 
                     {
                         utesekH[i] = 2 * b;
                         lifeVillain -= 2 * b;
@@ -42,12 +42,12 @@ namespace hos
                         utesekH[i] = b;
 
                     }
-                    if (miss(rnd.Next(0, 10))) 
+                    if (miss(rnd.Next(0, 10),"V")) 
                     {
                         utesekE[i] = 0;
 
                     }
-                    else if (critic(rnd.Next(0, 10))) 
+                    else if (critic(rnd.Next(0, 10),"V")) 
                     {
                         lifeHero -= 2 * a;
                         utesekE[i] = 2 * a;
@@ -58,38 +58,40 @@ namespace hos
                         utesekE[i] = a;
                     }
 
-                    Console.WriteLine(lifeHero + " " + lifeVillain);
+                    Console.WriteLine("Hero's life: " +lifeHero + ", Villain's life: " + lifeVillain);
                     int hos = 0;
                     int ellenfel = 0;
+                        Console.WriteLine("Who will punch first?Biggest number will start.");
                         while (hos == ellenfel)
                         {
                             hos = rnd.Next(0, 101);
                             ellenfel = rnd.Next(0, 101);
-                            Console.WriteLine(hos + " " + ellenfel);
-
+                            Console.WriteLine("Heros's number is: "+ hos + ", villain's number is: " +ellenfel);
+                            
 
                             if (hos > ellenfel)
                             {
+                                Console.WriteLine("Hero punhes first.");
                                 egyutt[2 * i] = utesekH[i];
                                 egyutt[2 * i + 1] = utesekE[i];
 
 
                                 if (veszitett(lifeVillain))
                                 {
-                                    Console.WriteLine("A hős nyert");
+                                    Console.WriteLine("Hero won");
                                     isDead = true;
 
                            //     folytat=false;
                                 }
                                 else if (veszitett(lifeHero))
                                 {
-                                    Console.WriteLine("A hős kikapott");
+                                    Console.WriteLine("Hero lost");
                                   isDead = true;
                           //        folytat = false;
                                 }
                                 else if (i == 9)
                                 {
-                                    Console.WriteLine("Döntetlen");
+                                    Console.WriteLine("Draw");
                                     isDead = true;
                            //       folytat = false;
                                 }
@@ -98,11 +100,12 @@ namespace hos
                             }
                             else
                             {
+                                Console.WriteLine("Villain punches first.");
                                 egyutt[2 * i] = utesekE[i];
                                 egyutt[2 * i + 1] = utesekH[i];
                                 if (veszitett(lifeHero))
                                 {
-                                    Console.WriteLine("A hős kikapott");
+                                    Console.WriteLine("Hero lost");
                                     isDead = true;
                              //     folytat = false;
                                    
@@ -110,7 +113,7 @@ namespace hos
                                 }
                                 else if (veszitett(lifeVillain))
                                 {
-                                    Console.WriteLine("A hős nyert");
+                                    Console.WriteLine("Hero won");
                                     isDead = true;
                              //     folytat = false;
 
@@ -118,7 +121,7 @@ namespace hos
                                 }
                                 else if (i == 9)
                                 {
-                                    Console.WriteLine("Döntetlen");
+                                    Console.WriteLine("Draw");
                                     isDead = true;
                            //       folytat = false;
                                 }
@@ -129,21 +132,26 @@ namespace hos
                      
                     }
                 }
+                Console.WriteLine("Villain's punches: ");
 
                 for (int i = 0; i < utesekE.Length; i++) {
-
+                    
                     Console.Write(utesekE[i] + " ");
             }
                 Console.WriteLine();
+                Console.WriteLine("Hero's punches: ");
                 for (int i = 0; i < utesekH.Length; i++)
                 {
+                    
                     Console.Write(utesekH[i] + " ");
 
                 }
                 Console.WriteLine();
+                Console.WriteLine("the series of punches: ");
                 for (int i = 0; i < egyutt.Length; i++)
                 {
-                    Console.Write(egyutt[i] + " , ");
+                   
+                    Console.Write(egyutt[i] + "  ");
 
                 }
 
@@ -183,30 +191,32 @@ namespace hos
         }
 
 
-        public static bool miss(int x)
+        public static bool miss(int x, string who)
         {
+            string y = who == "H" ? "Hero" : "Villain";
             if (x <= 1)
             {
-                Console.WriteLine("Ez mellé ment");
+                Console.WriteLine($"{y} missed the punch");
                 return true;
             }
             else
             {
-                Console.WriteLine("Talált!");
+                Console.WriteLine($"{y} didn't miss the punch!");
                 return false;
             }
         }
-        public static bool critic(int x)
+        public static bool critic(int x, string who)
         {
+            String y = who == "H" ? "Hero" : "Villain";
             if (x <= 2)
             {
-                Console.WriteLine("Kritikus");
+                Console.WriteLine($"{y} made a critical punch, counts double");
                 return true;
 
             }
             else
             {
-                Console.WriteLine("Normál ütés");
+                Console.WriteLine($"{y} made a normal punch");
                 return false;
             }
         }
@@ -227,6 +237,7 @@ namespace hos
         {
             while (x != "y" && x != "n")
             {
+                Console.WriteLine();
                 Console.WriteLine("Would you like to continue? (y/n)");
                 x = Console.ReadLine();
              
